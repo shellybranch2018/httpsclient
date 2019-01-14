@@ -3,7 +3,7 @@
  
 
 
-function getHTML (options, callback) { // 2. options receives the requestOptions 
+function getHTML (options, callback) { // 2. options receives the requestOptions and requestOptions now becomes 'options', 4. printHTML now becomes 'callback'
 
 
   var body = "";
@@ -19,9 +19,6 @@ function getHTML (options, callback) { // 2. options receives the requestOptions
     body = data.concat('\n');
 
 
-
-    //console.log(body);
-  	//console.log(data.concat('\n'));
     //console.log('Chunk Received. Length:', data.length);
   });
 
@@ -35,7 +32,7 @@ function getHTML (options, callback) { // 2. options receives the requestOptions
 });
 }
 
-function printHTML (html) { //4. this function takes the data from the body and prints it.
+function printHTML (html) { //5. this function takes the data from the body and prints it.
   console.log(html);
 }
 
@@ -45,4 +42,4 @@ function printHTML (html) { //4. this function takes the data from the body and 
   };
 
 
-getHTML(requestOptions, printHTML) //  1.requestOptions is passeed to the options paremeter to trigger getHTML
+getHTML(requestOptions, printHTML) //  1.requestOptions is passed to the options paremeter to trigger getHTML
