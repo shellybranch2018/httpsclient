@@ -2,14 +2,7 @@
 
 
 
-
-
- 
-
-//getHTML(options, printHTML)
-
-
-module.exports = function getHTML (options, callback) {
+module.exports = function getHTML (options, callback) { // 2. This code runs to retrieve the data and once it has all of the data, it triggers the callback below
 
   var body = "";
   https.get(options, function (response) {
